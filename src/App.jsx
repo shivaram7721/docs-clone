@@ -1,5 +1,9 @@
-import React from "react";
+import { FormatSection } from "./components/FormatSections/FormatSection";
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <FormatSection />
+    </div>
+  );
 }
