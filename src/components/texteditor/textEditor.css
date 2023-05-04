@@ -1,0 +1,18 @@
+.texteditor___container{
+    background-color: #f5f5f5;
+    width : 100vw;
+    margin-top: .5rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+.container{
+    box-sizing: border-box;
+    width: 60%;
+    background-color: #fff;
+    /* box-shadow: 0 0 5px 0 rgba(0 , 0, 0, 0.5); */
+    margin:1rem auto;
+    padding: 3rem;
+    min-height: 100vh;
+    border: 1px solid rgb(198, 197, 197);
+    outline: none;
+}
