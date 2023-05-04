@@ -28,156 +28,158 @@ import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined
 import {RxDividerVertical} from 'react-icons/rx'
 import styles from './FormatIcons.module.css'
 
-export function Actions() {
+export function FormatIcons(props) {
+
+    console.log(props.onClick)
 
     const actions = [
         {
-            icon:<UndoIcon />,
-            tag: ''
+            icon:<UndoIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <RedoIcon />,
-            tag: ''
+            icon: <RedoIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <RedoIcon />,
-            tag: ''
+            icon: <PrintOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <SpellcheckOutlinedIcon />,
-            tag: ''
+            icon: <SpellcheckOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <FormatColorFillOutlinedIcon />,
-            tag: ''
+            icon: <FormatColorFillOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon:<SelectZoom />,
-            tag: ''
+            icon:<SelectZoom style={{width:"5vw"}}/>,
+            tag: 'p'
         },
         {
             icon: <RxDividerVertical />,
-            tag: ''
+            tag: 'p'
         },
         {
             icon: <FontSize />,
-            tag: ''
+            tag: 'p'
         },
         {
             icon: <RxDividerVertical />,
-            tag: ''
+            tag: 'p'
         },
         {
             icon: <FontFamily />,
-            tag: ''
+            tag: 'p'
         },
         {
             icon:<RxDividerVertical />,
-            tag: ''
+            tag: 'p'
         },
         {
-            icon: <RemoveOutlinedIcon />,
-            tag: ''
+            icon: <RemoveOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
             icon: <input style={{width:"2vw"}} type='text' />,
-            tag: ''
+            tag: 'p'
         },
         {
-            icon: <AddOutlinedIcon />,
-            tag: ''
+            icon: <AddOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
             icon: <RxDividerVertical />,
-            tag: ''
+            tag: 'p'
         },
         {
-            icon:<FormatBoldOutlinedIcon />,
-            tag: ''
+            icon:<FormatBoldOutlinedIcon sx={{width:"1.4vw"}}/>,
+            tag: 'strong'
         },
         {
-            icon: <FormatItalicOutlinedIcon />,
-            tag: ''
+            icon: <FormatItalicOutlinedIcon sx={{width:"1.4vw"}}/>,
+            tag: 'i'
         },
         {
-            icon: <FormatUnderlinedOutlinedIcon />,
-            tag: ''
+            icon: <FormatUnderlinedOutlinedIcon sx={{width:"1.4vw"}}/>,
+            tag: 'u'
         },
         {
-            icon: <FormatColorTextOutlinedIcon />,
-            tag: ''
+            icon: <FormatColorTextOutlinedIcon sx={{width:"1.4vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <EditOutlinedIcon />,
-            tag: ''
+            icon: <EditOutlinedIcon sx={{width:"1.4vw"}}/>,
+            tag: 'p'
         },
         {
             icon:<RxDividerVertical />,
-            tag: ''
+            tag: 'p'
         },
         {
-            icon: <InsertLinkOutlinedIcon />,
-            tag: ''
+            icon: <InsertLinkOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <AddCommentOutlinedIcon />,
-            tag: ''
+            icon: <AddCommentOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <InsertPhotoOutlinedIcon />,
-            tag: ''
+            icon: <InsertPhotoOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <RxDividerVertical />,
-            tag: ''
+            icon: <RxDividerVertical sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon:<FormatAlignLeftOutlinedIcon />,
-            tag: ''
+            icon:<FormatAlignLeftOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <ArrowDropDownOutlinedIcon />,
-            tag: ''
+            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <FormatLineSpacingOutlinedIcon />,
-            tag: ''
+            icon: <FormatLineSpacingOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <ChecklistOutlinedIcon />,
-            tag: ''
+            icon: <ChecklistOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <ArrowDropDownOutlinedIcon />,
-            tag: ''
+            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon:<FormatListBulletedOutlinedIcon />,
-            tag: ''
+            icon:<FormatListBulletedOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <ArrowDropDownOutlinedIcon />,
-            tag: ''
+            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <FormatListNumberedOutlinedIcon />,
-            tag: ''
+            icon: <FormatListNumberedOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <ArrowDropDownOutlinedIcon />,
-            tag: ''
+            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <FormatIndentDecreaseOutlinedIcon />,
-            tag: ''
+            icon: <FormatIndentDecreaseOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon:<FormatIndentIncreaseOutlinedIcon />,
-            tag: ''
+            icon:<FormatIndentIncreaseOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
         {
-            icon: <FormatClearOutlinedIcon />,
-            tag: ''
+            icon: <FormatClearOutlinedIcon sx={{width:"1.2vw"}}/>,
+            tag: 'p'
         },
     ]
 
@@ -187,7 +189,7 @@ export function Actions() {
         <div className={styles.formatContainer}>
             {
                 actions.map( (action, index)=> (
-                    <p className={styles.formatIcons} key={index}>{action.icon}</p>
+                    <p onClick={()=> props.onClick(action.tag)} className={styles.formatIcons} key={index}>{action.icon}</p>
                 ))
             }
         </div>
