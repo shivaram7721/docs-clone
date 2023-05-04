@@ -8,6 +8,9 @@ import Stack from "@mui/material/Stack";
 import MenuListComposition from "../menus/FileMenu";
 import { Colors, iconStyle } from "../../constants/Colors";
 import { Button } from "@mui/material";
+import EditMenu from "../menus/EditMenu";
+import ViewMenu from "../menus/ViewMenu";
+import InsertMenu from "../menus/InsertMenu";
 
 const iconMainStyle = {
   width: "36px",
@@ -26,7 +29,10 @@ export default function Header() {
         <InsertDriveFileIcon style={iconMainStyle} />
         <Stack direction="column">
           <Stack direction="row" spacing={2}>
-            <div style={{ fontSize: "18px", color: Colors.fontPrimary }}>
+            <div
+              contentEditable
+              style={{ fontSize: "18px", color: Colors.fontPrimary }}
+            >
               Untitled document
             </div>
             <StarBorderOutlinedIcon style={iconStyle} />
@@ -34,8 +40,9 @@ export default function Header() {
           </Stack>
           <Stack direction="row">
             <MenuListComposition />
-            <MenuListComposition />
-            <MenuListComposition />
+            <EditMenu />
+            <ViewMenu />
+            <InsertMenu />
           </Stack>
         </Stack>
       </Stack>

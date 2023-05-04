@@ -8,14 +8,9 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Stack from "@mui/material/Stack";
 import { iconStyle } from "../../constants/Colors";
-import UndoIcon from "@mui/icons-material/Undo";
-import RedoIcon from "@mui/icons-material/Redo";
-import ContentCutOutlinedIcon from "@mui/icons-material/ContentCutOutlined";
-import ContentCopyRoundedIcon from "@mui/icons-material/ContentCopyRounded";
-import ContentPasteRoundedIcon from "@mui/icons-material/ContentPasteRounded";
-import SelectAllOutlinedIcon from "@mui/icons-material/SelectAllOutlined";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import FindReplaceIcon from "@mui/icons-material/FindReplace";
+import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
+import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
+import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
 
 const menuCompStyle = {
   marginBottom: "-4px",
@@ -27,7 +22,7 @@ const menuCompStyle = {
   color: "#535457",
 };
 
-export default function EditMenu() {
+export default function ViewMenu() {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
@@ -52,7 +47,6 @@ export default function EditMenu() {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -74,7 +68,7 @@ export default function EditMenu() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Edit
+          View
         </Button>
         <Popper
           open={open}
@@ -102,64 +96,48 @@ export default function EditMenu() {
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem onClick={handleClose}>
-                      <UndoIcon
+                      <CreateOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Undo
+                      Mode
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <RedoIcon
+                      <DoneOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Redo
+                      Show prite layout
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <ContentCutOutlinedIcon
+                      <DoneOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Cut
+                      Show ruler
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <ContentCopyRoundedIcon
+                      <DoneOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Copy
+                      Show outline
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{ marginLeft: "30px" }}>
+                      Show equation toolbar
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{ marginLeft: "30px" }}>
+                      Show non-printing characters
                     </MenuItem>
 
                     <MenuItem onClick={handleClose}>
-                      <ContentPasteRoundedIcon
+                      <FullscreenOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Paste
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <SelectAllOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Select all
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <DeleteOutlineOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Delete
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <FindReplaceIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Find and replace
+                      Full screen
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
@@ -171,3 +149,15 @@ export default function EditMenu() {
     </Stack>
   );
 }
+
+// function MenuItem({onClick , iconData, iconName}) {
+//   return (
+//     <MenuItem onClick={onClick}>
+//       <{iconData}
+//         sx={{ marginRight: "10px" }}
+//         style={iconStyle}
+//       />
+//       {iconName}
+//     </MenuItem>
+//   );
+// }

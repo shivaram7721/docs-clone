@@ -8,14 +8,19 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Stack from "@mui/material/Stack";
 import { iconStyle } from "../../constants/Colors";
-import UndoIcon from "@mui/icons-material/Undo";
-import RedoIcon from "@mui/icons-material/Redo";
-import ContentCutOutlinedIcon from "@mui/icons-material/ContentCutOutlined";
-import ContentCopyRoundedIcon from "@mui/icons-material/ContentCopyRounded";
-import ContentPasteRoundedIcon from "@mui/icons-material/ContentPasteRounded";
-import SelectAllOutlinedIcon from "@mui/icons-material/SelectAllOutlined";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import FindReplaceIcon from "@mui/icons-material/FindReplace";
+import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
+import TableChartOutlinedIcon from "@mui/icons-material/TableChartOutlined";
+import InsertChartOutlinedIcon from "@mui/icons-material/InsertChartOutlined";
+import HorizontalRuleOutlinedIcon from "@mui/icons-material/HorizontalRuleOutlined";
+import InsertEmoticonOutlinedIcon from "@mui/icons-material/InsertEmoticonOutlined";
+import SubjectIcon from "@mui/icons-material/Subject";
+import ViewDayIcon from "@mui/icons-material/ViewDay";
+import TagIcon from "@mui/icons-material/Tag";
+import InsertPageBreakIcon from "@mui/icons-material/InsertPageBreak";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
+import AddCommentOutlinedIcon from "@mui/icons-material/AddCommentOutlined";
+import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import TocOutlinedIcon from "@mui/icons-material/TocOutlined";
 
 const menuCompStyle = {
   marginBottom: "-4px",
@@ -27,7 +32,7 @@ const menuCompStyle = {
   color: "#535457",
 };
 
-export default function EditMenu() {
+export default function InsertMenu() {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
@@ -74,7 +79,7 @@ export default function EditMenu() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Edit
+          Insert
         </Button>
         <Popper
           open={open}
@@ -102,64 +107,99 @@ export default function EditMenu() {
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem onClick={handleClose}>
-                      <UndoIcon
+                      <ImageOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Undo
+                      Image
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <RedoIcon
+                      <TableChartOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Redo
+                      Table
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <ContentCutOutlinedIcon
+                      <InsertChartOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Cut
+                      Chart
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <ContentCopyRoundedIcon
+                      <HorizontalRuleOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Copy
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <ContentPasteRoundedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Paste
+                      Horizontal line
                     </MenuItem>
 
                     <MenuItem onClick={handleClose}>
-                      <SelectAllOutlinedIcon
+                      <InsertEmoticonOutlinedIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Select all
+                      Emoji
                     </MenuItem>
 
                     <MenuItem onClick={handleClose}>
-                      <DeleteOutlineOutlinedIcon
+                      <SubjectIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Delete
+                      Footnote
                     </MenuItem>
 
                     <MenuItem onClick={handleClose}>
-                      <FindReplaceIcon
+                      <ViewDayIcon
                         sx={{ marginRight: "10px" }}
                         style={iconStyle}
                       />
-                      Find and replace
+                      Headers & footers
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose}>
+                      <TagIcon sx={{ marginRight: "10px" }} style={iconStyle} />
+                      Page numbers
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose}>
+                      <InsertPageBreakIcon
+                        sx={{ marginRight: "10px" }}
+                        style={iconStyle}
+                      />
+                      Break
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose}>
+                      <InsertLinkIcon
+                        sx={{ marginRight: "10px" }}
+                        style={iconStyle}
+                      />
+                      Link
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose}>
+                      <AddCommentOutlinedIcon
+                        sx={{ marginRight: "10px" }}
+                        style={iconStyle}
+                      />
+                      Comment
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <BookmarkBorderOutlinedIcon
+                        sx={{ marginRight: "10px" }}
+                        style={iconStyle}
+                      />
+                      Bookmark
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <TocOutlinedIcon
+                        sx={{ marginRight: "10px" }}
+                        style={iconStyle}
+                      />
+                      Table of contents
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
