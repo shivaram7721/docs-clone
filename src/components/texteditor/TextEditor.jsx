@@ -1,3 +1,4 @@
+
 import React from "react";
 import Box from "@mui/material/Box";
 import "./textEditor.css";
@@ -16,5 +17,4 @@ const TextEditor = () => {
     </section>
   );
 };
-
 export default TextEditor;

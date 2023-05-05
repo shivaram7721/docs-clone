@@ -1,3 +1,4 @@
+
 import UndoIcon from "@mui/icons-material/Undo";
 import RedoIcon from "@mui/icons-material/Redo";
 import PrintIcon from "@mui/icons-material/Print";
@@ -194,4 +195,5 @@ export function FormatSection() {
       <FormatClearIcon className={styles.formatIcons} />
     </div>
   );
+
 }
