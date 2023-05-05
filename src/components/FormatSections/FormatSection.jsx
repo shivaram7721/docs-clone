@@ -27,8 +27,25 @@ import FormatClearIcon from "@mui/icons-material/FormatClear";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { RxDividerVertical } from "react-icons/rx";
 import styles from "./FormatSection.module.css";
+import { useRef } from "react";
 
 export function FormatSection() {
+  const inputRef = useRef(null);
+
+  function handleImageOpen() {
+    inputRef.current.click();
+  }
+  function captureImage(event) {
+    if (event.target.files[0]) {
+      console.log(event.target.files[0]);
+      document.execCommand(
+        "insertImage",
+        "",
+        URL.createObjectURL(event.target.files[0])
+      );
+    }
+  }
+
   return (
     <div className={styles.formatContainer}>
       <UndoIcon className={styles.formatIcons} />
@@ -54,7 +71,13 @@ export function FormatSection() {
       <RxDividerVertical className={styles.formatIcons} />
       <InsertLinkIcon className={styles.formatIcons} />
       <AddCommentIcon className={styles.formatIcons} />
-      <InsertPhotoIcon className={styles.formatIcons} />
+      <span>
+        <InsertPhotoIcon
+          className={styles.formatIcons}
+          onClick={handleImageOpen}
+        />
+        <input onChange={captureImage} hidden ref={inputRef} type="file" />
+      </span>
       <RxDividerVertical className={styles.formatIcons} />
       <FormatAlignLeftIcon className={styles.formatIcons} />
       <ArrowDropDownIcon className={styles.formatIcons} />
