@@ -19,3 +19,9 @@
 .formatIcons:hover {
     background-color: rgb(94, 92, 92, .2);
 }
+
+.select {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}

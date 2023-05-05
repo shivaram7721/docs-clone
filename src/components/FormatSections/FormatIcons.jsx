@@ -6,8 +6,6 @@ import FormatColorFillOutlinedIcon from '@mui/icons-material/FormatColorFillOutl
 import { SelectZoom } from './selectZoom';
 import { FontFamily } from './fontFamily';
 import { FontSize } from './fontSize';
-import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import FormatBoldOutlinedIcon from '@mui/icons-material/FormatBoldOutlined';
 import FormatItalicOutlinedIcon from '@mui/icons-material/FormatItalicOutlined';
 import FormatUnderlinedOutlinedIcon from '@mui/icons-material/FormatUnderlinedOutlined';
@@ -16,30 +14,21 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import AddCommentOutlinedIcon from '@mui/icons-material/AddCommentOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
-import FormatAlignLeftOutlinedIcon from '@mui/icons-material/FormatAlignLeftOutlined';
-import FormatLineSpacingOutlinedIcon from '@mui/icons-material/FormatLineSpacingOutlined';
-import ChecklistOutlinedIcon from '@mui/icons-material/ChecklistOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import FormatListNumberedOutlinedIcon from '@mui/icons-material/FormatListNumberedOutlined';
-import FormatIndentDecreaseOutlinedIcon from '@mui/icons-material/FormatIndentDecreaseOutlined';
-import FormatIndentIncreaseOutlinedIcon from '@mui/icons-material/FormatIndentIncreaseOutlined';
-import FormatClearOutlinedIcon from '@mui/icons-material/FormatClearOutlined';
-import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import {RxDividerVertical} from 'react-icons/rx'
 import styles from './FormatIcons.module.css'
+// import { TextAlign } from './textAlign';
 
 export function FormatIcons(props) {
 
-    console.log(props.onClick)
 
     const actions = [
         {
             icon:<UndoIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
+            tag: 'undo'
         },
         {
             icon: <RedoIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
+            tag: 'redo'
         },
         {
             icon: <PrintOutlinedIcon sx={{width:"1.2vw"}}/>,
@@ -54,56 +43,20 @@ export function FormatIcons(props) {
             tag: 'p'
         },
         {
-            icon:<SelectZoom style={{width:"5vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <RxDividerVertical />,
-            tag: 'p'
-        },
-        {
-            icon: <FontSize />,
-            tag: 'p'
-        },
-        {
-            icon: <RxDividerVertical />,
-            tag: 'p'
-        },
-        {
-            icon: <FontFamily />,
-            tag: 'p'
-        },
-        {
-            icon:<RxDividerVertical />,
-            tag: 'p'
-        },
-        {
-            icon: <RemoveOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <input style={{width:"2vw"}} type='text' />,
-            tag: 'p'
-        },
-        {
-            icon: <AddOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
             icon: <RxDividerVertical />,
             tag: 'p'
         },
         {
             icon:<FormatBoldOutlinedIcon sx={{width:"1.4vw"}}/>,
-            tag: 'strong'
+            tag: 'bold'
         },
         {
             icon: <FormatItalicOutlinedIcon sx={{width:"1.4vw"}}/>,
-            tag: 'i'
+            tag: 'italic'
         },
         {
             icon: <FormatUnderlinedOutlinedIcon sx={{width:"1.4vw"}}/>,
-            tag: 'u'
+            tag: 'underline'
         },
         {
             icon: <FormatColorTextOutlinedIcon sx={{width:"1.4vw"}}/>,
@@ -133,54 +86,6 @@ export function FormatIcons(props) {
             icon: <RxDividerVertical sx={{width:"1.2vw"}}/>,
             tag: 'p'
         },
-        {
-            icon:<FormatAlignLeftOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <FormatLineSpacingOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <ChecklistOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon:<FormatListBulletedOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <FormatListNumberedOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <ArrowDropDownOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <FormatIndentDecreaseOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon:<FormatIndentIncreaseOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
-        {
-            icon: <FormatClearOutlinedIcon sx={{width:"1.2vw"}}/>,
-            tag: 'p'
-        },
     ]
 
 
@@ -192,6 +97,11 @@ export function FormatIcons(props) {
                     <p onClick={()=> props.onClick(action.tag)} className={styles.formatIcons} key={index}>{action.icon}</p>
                 ))
             }
+            <div className={styles.select}>
+                <FontFamily />
+                <FontSize />
+                <SelectZoom />
+            </div>
         </div>
     );
 }

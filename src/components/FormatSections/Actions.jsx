@@ -12,7 +12,8 @@ export function Actions() {
     const divRef = useRef()
 
     const handlePerformAction = (action) => {
-        setSelectedAction(action)
+        // setSelectedAction(action)
+        document.execCommand(action)
     };
 
     useEffect(() => {
@@ -50,12 +51,6 @@ export function Actions() {
 
             </div>
 
-            {/* <TextEditor ref={divRef}
-                contentEditable
-                onKeyUp={onChange}
-                dangerouslySetInnerHTML={{
-                    __html: content
-                }}/> */}
         </div>
     );
 }
