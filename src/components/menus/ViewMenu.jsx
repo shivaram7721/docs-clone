@@ -11,6 +11,7 @@ import { iconStyle } from "../../constants/Colors";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
+import { MenuComponent } from "./localComponents/MenuComponent";
 
 const menuCompStyle = {
   marginBottom: "-4px",
@@ -95,34 +96,16 @@ export default function ViewMenu() {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>
-                      <CreateOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Mode
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <DoneOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Show prite layout
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <DoneOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Show ruler
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <DoneOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Show outline
-                    </MenuItem>
+                    <MenuComponent Icon={CreateOutlinedIcon} title="Mode" />
+                    <MenuComponent
+                      Icon={DoneOutlinedIcon}
+                      title="Show prite layout"
+                    />
+                    <MenuComponent Icon={DoneOutlinedIcon} title="Show ruler" />
+                    <MenuComponent
+                      Icon={DoneOutlinedIcon}
+                      title="Show outline"
+                    />
 
                     <MenuItem onClick={handleClose} sx={{ marginLeft: "30px" }}>
                       Show equation toolbar
@@ -132,13 +115,10 @@ export default function ViewMenu() {
                       Show non-printing characters
                     </MenuItem>
 
-                    <MenuItem onClick={handleClose}>
-                      <FullscreenOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Full screen
-                    </MenuItem>
+                    <MenuComponent
+                      Icon={FullscreenOutlinedIcon}
+                      title="Full screen"
+                    />
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -149,15 +129,3 @@ export default function ViewMenu() {
     </Stack>
   );
 }
-
-// function MenuItem({onClick , iconData, iconName}) {
-//   return (
-//     <MenuItem onClick={onClick}>
-//       <{iconData}
-//         sx={{ marginRight: "10px" }}
-//         style={iconStyle}
-//       />
-//       {iconName}
-//     </MenuItem>
-//   );
-// }

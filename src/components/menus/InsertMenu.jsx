@@ -21,6 +21,7 @@ import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import AddCommentOutlinedIcon from "@mui/icons-material/AddCommentOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import TocOutlinedIcon from "@mui/icons-material/TocOutlined";
+import { MenuComponent } from "./localComponents/MenuComponent";
 
 const menuCompStyle = {
   marginBottom: "-4px",
@@ -106,101 +107,47 @@ export default function InsertMenu() {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>
-                      <ImageOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Image
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <TableChartOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Table
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <InsertChartOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Chart
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <HorizontalRuleOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Horizontal line
-                    </MenuItem>
+                    {/* {iconData.map((ele) => (
+                      <MenuComponent Icon={ele.Icon} title={ele.title} />
+                    ))} */}
 
-                    <MenuItem onClick={handleClose}>
-                      <InsertEmoticonOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Emoji
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <SubjectIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Footnote
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <ViewDayIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Headers & footers
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <TagIcon sx={{ marginRight: "10px" }} style={iconStyle} />
-                      Page numbers
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <InsertPageBreakIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Break
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <InsertLinkIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Link
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <AddCommentOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Comment
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <BookmarkBorderOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Bookmark
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <TocOutlinedIcon
-                        sx={{ marginRight: "10px" }}
-                        style={iconStyle}
-                      />
-                      Table of contents
-                    </MenuItem>
+                    <MenuComponent Icon={ImageOutlinedIcon} title="Image" />
+                    <MenuComponent
+                      Icon={TableChartOutlinedIcon}
+                      title="Table"
+                    />
+                    <MenuComponent
+                      Icon={InsertChartOutlinedIcon}
+                      title="Chart"
+                    />
+                    <MenuComponent
+                      Icon={HorizontalRuleOutlinedIcon}
+                      title="Horizontal line"
+                    />
+                    <MenuComponent
+                      Icon={InsertEmoticonOutlinedIcon}
+                      title="Emoji"
+                    />
+                    <MenuComponent Icon={SubjectIcon} title="Footnote" />
+                    <MenuComponent
+                      Icon={ViewDayIcon}
+                      title="Headers & footers"
+                    />
+                    <MenuComponent Icon={TagIcon} title="Page numbers" />
+                    <MenuComponent Icon={InsertPageBreakIcon} title="Break" />
+                    <MenuComponent Icon={InsertLinkIcon} title="Link" />
+                    <MenuComponent
+                      Icon={AddCommentOutlinedIcon}
+                      title="Comment"
+                    />
+                    <MenuComponent
+                      Icon={BookmarkBorderOutlinedIcon}
+                      title="Bookmark"
+                    />
+                    <MenuComponent
+                      Icon={TocOutlinedIcon}
+                      title="Table of contents"
+                    />
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

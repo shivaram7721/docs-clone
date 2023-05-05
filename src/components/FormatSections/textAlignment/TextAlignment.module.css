@@ -1,0 +1,9 @@
+.formatContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: rgb(220, 231, 241);
+  border-radius: 15px;
+  padding: 0.2rem;
+  width: 300px;
+}
