@@ -1,0 +1,11 @@
+.colorbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+}
+.inputbox {
+  width: 15px;
+  height: 5px;
+}

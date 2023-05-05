@@ -11,11 +11,10 @@ import AddIcon from "@mui/icons-material/Add";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
-import FormatColorTextIcon from "@mui/icons-material/FormatColorText";
-import EditIcon from "@mui/icons-material/Edit";
+
 import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import AddCommentIcon from "@mui/icons-material/AddComment";
-import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
+
 import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
 import FormatLineSpacingIcon from "@mui/icons-material/FormatLineSpacing";
 import ChecklistIcon from "@mui/icons-material/Checklist";
@@ -25,8 +24,6 @@ import FormatIndentDecreaseIcon from "@mui/icons-material/FormatIndentDecrease";
 import FormatIndentIncreaseIcon from "@mui/icons-material/FormatIndentIncrease";
 import FormatClearIcon from "@mui/icons-material/FormatClear";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
-import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
 import { RxDividerVertical } from "react-icons/rx";
 import styles from "./FormatSection.module.css";
 import React, { useState, useRef } from "react";
@@ -35,48 +32,48 @@ import { scale } from "../../constants/ConstData";
 
 export function FormatSection() {
   const inputRef = useRef(textEditorRefAtom);
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const [show2, setShow2] = useState(false);
   const [scaleSize, setScaleSize] = useState("100%");
 
-  function handleColor(e) {
-    document.execCommand("foreColor", "", e.target.value);
-  }
+  // function handleColor(e) {
+  //   document.execCommand("foreColor", "", e.target.value);
+  // }
 
-  function handlebackgroundhighlight(e) {
-    document.execCommand("backColor", "", e.target.value);
-  }
+  // function handlebackgroundhighlight(e) {
+  //   document.execCommand("backColor", "", e.target.value);
+  // }
 
-  function handlePosition(element) {
-    document.execCommand(element);
-  }
+  // function handlePosition(element) {
+  //   document.execCommand(element);
+  // }
 
-  function handleImageOpen() {
-    inputRef.current.click();
-  }
+  // function handleImageOpen() {
+  //   inputRef.current.click();
+  // }
 
-  function handleFileSelect(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+  // function handleFileSelect(event) {
+  //   const file = event.target.files[0];
+  //   const reader = new FileReader();
 
-    reader.onload = function (event) {
-      const img = document.createElement("img");
-      img.src = event.target.result;
-      img.width = 500;
-      img.height = 500;
-      const editor = inputRef.current;
-      editor.focus();
-      const selection = document.getSelection();
-      if (selection.rangeCount === 0) return;
-      const range = selection.getRangeAt(0);
-      range.insertNode(img);
-    };
+  //   reader.onload = function (event) {
+  //     const img = document.createElement("img");
+  //     img.src = event.target.result;
+  //     img.width = 500;
+  //     img.height = 500;
+  //     const editor = inputRef.current;
+  //     editor.focus();
+  //     const selection = document.getSelection();
+  //     if (selection.rangeCount === 0) return;
+  //     const range = selection.getRangeAt(0);
+  //     range.insertNode(img);
+  //   };
 
-    reader.readAsDataURL(file);
-  }
+  //   reader.readAsDataURL(file);
+  // }
 
   function handleScale(e) {
-    console.log(inputRef.current);
+    // console.log(inputRef.current);
     setScaleSize(e.target.value);
     console.log(e.target.value);
     console.log(inputRef);
@@ -128,7 +125,7 @@ export function FormatSection() {
       <FormatItalicIcon className={styles.formatIcons} />
       <FormatUnderlinedIcon className={styles.formatIcons} />
 
-      <span className={styles.colorbox}>
+      {/* <span className={styles.colorbox}>
         <FormatColorTextIcon
           className={styles.formatIcons}
           onClick={() => setShow(!show)}
@@ -142,9 +139,9 @@ export function FormatSection() {
             />
           </>
         ) : null}
-      </span>
+      </span> */}
 
-      <span className={styles.colorbox}>
+      {/* <span className={styles.colorbox}>
         <EditIcon
           className={styles.formatIcons}
           onClick={() => setShow2(!show2)}
@@ -158,21 +155,21 @@ export function FormatSection() {
             />
           </>
         ) : null}
-      </span>
+      </span> */}
 
       <RxDividerVertical className={styles.formatIcons} />
       <InsertLinkIcon className={styles.formatIcons} />
       <AddCommentIcon className={styles.formatIcons} />
-      <div>
+      {/* <div>
         <InsertPhotoIcon
           className={styles.formatIcons}
           onClick={handleImageOpen}
         />
         <input onChange={handleFileSelect} hidden ref={inputRef} type="file" />
-      </div>
+      </div> */}
       <RxDividerVertical className={styles.formatIcons} />
 
-      <FormatAlignLeftIcon
+      {/* <FormatAlignLeftIcon
         className={styles.formatIcons}
         onClick={() => handlePosition("justifyLeft")}
       />
@@ -183,7 +180,7 @@ export function FormatSection() {
       <FormatAlignRightIcon
         className={styles.formatIcons}
         onClick={() => handlePosition("justifyRight")}
-      />
+      /> */}
 
       <FormatLineSpacingIcon className={styles.formatIcons} />
       <ChecklistIcon className={styles.formatIcons} />

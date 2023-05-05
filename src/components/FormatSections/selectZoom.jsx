@@ -32,7 +32,7 @@ export function SelectZoom() {
         value={selectedOption}
         onChange={handleScale}
       >
-        {data.map((ele) => (
+        {scale.map((ele) => (
           <option
             onClick={(e) => setSelectedOption(e.target.value)}
             value={ele}
@@ -40,15 +40,6 @@ export function SelectZoom() {
             {ele}
           </option>
         ))}
-
-        {/* <option value="100%">100%</option>
-        <option value="50%">50%</option>
-        <option value="75%">75%</option>
-        <option value="90%">90%</option>
-        <option value="100%">100%</option>
-        <option value="125%">125%</option>
-        <option value="150%">150%</option>
-        <option value="200%">200%</option> */}
       </select>
     </>
   );
