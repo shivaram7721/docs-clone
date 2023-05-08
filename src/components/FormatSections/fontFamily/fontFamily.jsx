@@ -4,6 +4,7 @@ export function FontFamily() {
   const [selectedOption, setSelectedOption] = useState('');
 
   function handleFamily(e) {
+    setSelectedOption(e.target.value)
     document.execCommand("fontName", " ", e.target.value)
   }
 

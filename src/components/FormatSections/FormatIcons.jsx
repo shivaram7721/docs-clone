@@ -4,7 +4,7 @@ import RedoIcon from "@mui/icons-material/Redo";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import SpellcheckOutlinedIcon from "@mui/icons-material/SpellcheckOutlined";
 import FormatColorFillOutlinedIcon from "@mui/icons-material/FormatColorFillOutlined";
-import { SelectZoom } from "./selectZoom/SelectZoom";
+import { SelectZoom } from "./selectZoom/selectZoom";
 import { FontFamily } from "./fontFamily/FontFamily";
 import { FontSize } from "./fontSize/FontSize";
 import FormatBoldOutlinedIcon from "@mui/icons-material/FormatBoldOutlined";

@@ -4,6 +4,7 @@ export function FontSize() {
   const [selectedOption, setSelectedOption] = useState('');
 
   function handleSize(e) {
+    setSelectedOption(e.target.value)
     document.execCommand("fontSize","", e.target.value)
   }
 
