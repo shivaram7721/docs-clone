@@ -6,7 +6,7 @@ import SpellcheckOutlinedIcon from "@mui/icons-material/SpellcheckOutlined";
 import FormatColorFillOutlinedIcon from "@mui/icons-material/FormatColorFillOutlined";
 import { SelectZoom } from "./selectZoom/selectZoom";
 import { FontFamily } from "./fontFamily/FontFamily";
-import { FontSize } from "./fontSize/FontSize";
+import { FontSize } from "./FontSize/FontSize";
 import FormatBoldOutlinedIcon from "@mui/icons-material/FormatBoldOutlined";
 import FormatItalicOutlinedIcon from "@mui/icons-material/FormatItalicOutlined";
 import FormatUnderlinedOutlinedIcon from "@mui/icons-material/FormatUnderlinedOutlined";
