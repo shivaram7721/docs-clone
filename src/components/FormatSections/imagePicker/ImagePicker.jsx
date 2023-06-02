@@ -16,8 +16,8 @@ export default function ImagePicker() {
     reader.onload = function (event) {
       const img = document.createElement("img");
       img.src = event.target.result;
-      img.width = 500;
-      img.height = 500;
+      img.width = 200;
+      img.height = 200;
       const editor = inputRef.current;
       editor.focus();
       const selection = document.getSelection();
