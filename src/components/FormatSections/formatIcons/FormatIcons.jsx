@@ -6,7 +6,7 @@ import SpellcheckOutlinedIcon from "@mui/icons-material/SpellcheckOutlined";
 import FormatColorFillOutlinedIcon from "@mui/icons-material/FormatColorFillOutlined";
 import { SelectZoom } from "../selectZoom/selectZoom";
 import {Font} from "../font/Font";
-import { FontSize } from "../size/Size";
+import { Size } from "../size/Size";
 import FormatBoldOutlinedIcon from "@mui/icons-material/FormatBoldOutlined";
 import FormatItalicOutlinedIcon from "@mui/icons-material/FormatItalicOutlined";
 import FormatUnderlinedOutlinedIcon from "@mui/icons-material/FormatUnderlinedOutlined";
@@ -118,7 +118,7 @@ export function FormatIcons(props) {
         <FontColorPicker />
         <BackgroundColorPicker />
         <Font />
-        <FontSize />
+        <Size />
         <SelectZoom inputRef={props.inputRef}/>
       </div>
     </div>
