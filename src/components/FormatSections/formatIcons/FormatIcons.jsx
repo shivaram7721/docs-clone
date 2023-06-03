@@ -4,9 +4,9 @@ import RedoIcon from "@mui/icons-material/Redo";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import SpellcheckOutlinedIcon from "@mui/icons-material/SpellcheckOutlined";
 import FormatColorFillOutlinedIcon from "@mui/icons-material/FormatColorFillOutlined";
-import { SelectZoom } from "./selectZoom/selectZoom";
-import {Font} from "./Font";
-import { FontSize } from "./fontSize/FontSize";
+import { SelectZoom } from "../selectZoom/selectZoom";
+import {Font} from "../font/Font";
+import { FontSize } from "../fontSize/FontSize";
 import FormatBoldOutlinedIcon from "@mui/icons-material/FormatBoldOutlined";
 import FormatItalicOutlinedIcon from "@mui/icons-material/FormatItalicOutlined";
 import FormatUnderlinedOutlinedIcon from "@mui/icons-material/FormatUnderlinedOutlined";
@@ -15,10 +15,10 @@ import StrikethroughSOutlinedIcon from '@mui/icons-material/StrikethroughSOutlin
 import AddCommentOutlinedIcon from "@mui/icons-material/AddCommentOutlined";
 import { RxDividerVertical } from "react-icons/rx";
 import styles from "./FormatIcons.module.css";
-import ImagePicker from '../FormatSections/imagePicker/ImagePicker'
-import BackgroundColorPicker from "../FormatSections/colorPicker/BackgroundColorPicker";
-import FontColorPicker from "../FormatSections/colorPicker/FontColorPicker";
-import TextAlignment from "./textAlignment/TextAlignment";
+import ImagePicker from '../imagePicker/ImagePicker'
+import BackgroundColorPicker from "../colorPicker/BackgroundColorPicker";
+import FontColorPicker from "../colorPicker/FontColorPicker";
+import TextAlignment from "../textAlignment/TextAlignment";
 import Tooltip from "@mui/material/Tooltip";
 
 

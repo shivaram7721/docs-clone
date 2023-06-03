@@ -18,7 +18,7 @@ const iconMainStyle = {
   color: "#2684fc",
 };
 
-export default function Header() {
+export function Header() {
   return (
     <Stack
       direction="row"
