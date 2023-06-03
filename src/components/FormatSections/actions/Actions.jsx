@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FormatIcons } from "./FormatIcons";
+import { FormatIcons } from "../formatIcons/FormatIcons";
 import Box from "@mui/material/Box";
 import styles from "./Actions.module.css";
 
