@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function FontFamily() {
+export function Font() {
   const [selectedOption, setSelectedOption] = useState('');
 
   function handleFamily(e) {
