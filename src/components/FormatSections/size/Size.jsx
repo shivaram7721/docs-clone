@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function FontSize() {
+export function Size() {
   const [selectedOption, setSelectedOption] = useState('');
 
   function handleSize(e) {
