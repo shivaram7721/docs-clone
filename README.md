@@ -1,6 +1,6 @@
 # Google Docs Clone
 
-This is a Google Docs CLone, where user can format the text based on requirements and all basic text formatting is available
+This is a Google Docs CLone, where user can format the text based on requirements and all basic text formatting is available  
 
 ## UI of Google Docs
 
