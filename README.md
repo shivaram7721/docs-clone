@@ -4,7 +4,7 @@ This is a Google Docs CLone, where user can format the text based on requirement
 
 ## UI of Google Docs
 
-![Docs UI screenshot](src/assets/docs.png)
+<img src="src/assets/docs.png" alt="docs">
 
 ## Deployment:
 This project is deployed on open platform [vercel.com](https://vercel.com/) 
